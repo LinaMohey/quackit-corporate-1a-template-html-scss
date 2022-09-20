@@ -1,0 +1,51 @@
+// Section Two
+section.two {
+    div.content {
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 20px;
+        h2 {
+            margin-top: 15px;
+            letter-spacing: 0.8px;
+            font-weight: 400;
+        }
+        p {
+            margin: 10px;
+            line-height: 1.5;
+            font-size: 0.8rem;
+            color: $light-grey;
+        }
+        span {
+            font-size: 1.3rem;
+            font-weight: 500;
+            letter-spacing: 0.8px;
+            color: $light-grey;
+        }
+    }
+    div.boxes {
+        @include makeGrid;
+        @include boxes;
+        .box {
+            img {
+                width: 360px;
+                height: 300px;
+                border-radius: 10px;
+            }
+            a {
+                display: block;
+                text-align: center;
+                font-size: 1.5rem;
+                margin: 10px;
+                color: $blue-color;
+                &:hover {
+                    text-decoration: underline;
+                }
+                p {
+                    font-size: 0.9rem;
+                    line-height: 1.5;
+                    color: $light-grey;
+                }
+            }
+        }
+    }
+}

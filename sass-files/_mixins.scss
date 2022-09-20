@@ -1,0 +1,33 @@
+@mixin makeFlex {
+    display: flex;
+}
+
+@mixin makeGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+@mixin buttons {
+    background-color: $primary-color;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+@mixin boxes {
+    max-width: 1100px;
+    margin: auto;
+}
+
+@mixin breakpoints($screen) {
+    @if $screen=="mobile-screen" {
+        @media (max-width: 700px) {
+            @content;
+        }
+    }
+    @else if $screen=="tablet-screen" {
+        @media (max-width: 1200px) {
+            @content;
+        }
+    }
+}

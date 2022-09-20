@@ -1,0 +1,69 @@
+// Tablets Screen Break-point
+@include breakpoints(tablet-screen) {
+    p {
+        font-size: 13px;
+    }
+    section.two {
+        div.boxes {
+            @include makeGrid;
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+    }
+}
+
+// Mobile Screen Break-point
+@include breakpoints(mobile-screen) {
+    p {
+        font-size: 12px;
+    }
+    div.main-header {
+        justify-content: space-between;
+        i.fa-solid.fa-bars.fa-2x {
+            display: inline-block;
+            padding: 5px;
+            font-size: 20px;
+            cursor: pointer;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+        div.logo {
+            h2 {
+                text-align: left;
+            }
+            ul {
+                display: none;
+            }
+        }
+        form {
+            display: none;
+        }
+    }
+    section.welcome-text {
+        h1 {
+            font-size: 2.6rem;
+            font-weight: 500;
+        }
+    }
+    section.two {
+        .boxes {
+            img {
+                width: 100%;
+            }
+        }
+    }
+    section.three {
+        div.boxes {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            gap: 10px;
+        }
+        .box {
+            span {
+                margin: 10px;
+            }
+        }
+    }
+}

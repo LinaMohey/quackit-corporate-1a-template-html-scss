@@ -1,0 +1,66 @@
+// Header
+.main-header {
+    @include makeFlex;
+    justify-content: space-around;
+    background-color: rgb(30, 28, 28);
+    color: $light-grey;
+    z-index: 9999;
+    position: fixed;
+    width: 100%;
+    .logo {
+        @include makeFlex;
+        font-size: 0.9rem;
+        padding: 10px;
+        font-weight: 300;
+        h2 {
+            font-size: 1.2rem;
+            margin: auto 30px;
+            font-weight: 400;
+            &:hover {
+                color: $primary-color;
+                cursor: pointer;
+            }
+        }
+        a:not(li.first):hover {
+            color: $primary-color;
+        }
+        ul {
+            @include makeFlex;
+        }
+        ul li {
+            margin-right: 10px;
+            padding: 5px;
+            a {
+                color: $light-grey;
+            }
+            &.first a {
+                color: $primary-color;
+            }
+        }
+    }
+    form {
+        align-self: center;
+        input {
+            padding: 10px;
+            width: 200px;
+            border-radius: 5px;
+        }
+        a {
+            @include buttons;
+            color: $black;
+            font-size: 0.9rem;
+            &:hover {
+                background-color: rgb(215, 208, 208);
+            }
+        }
+    }
+    i.fa-solid.fa-bars.fa-2x {
+        padding: 5px;
+        color: var(--primary-color);
+        display: none;
+        background-color: rgb(43, 42, 42);
+        margin: 10px;
+        padding: 5px 15px;
+        border-radius: 4px;
+    }
+}

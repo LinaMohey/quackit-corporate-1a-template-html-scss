@@ -1,0 +1,24 @@
+// Footer
+div.footer {
+    text-align: center;
+    font-size: 0.9rem;
+    ul {
+        @include makeFlex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+    li {
+        a {
+            color: $blue-color;
+            padding: 5px;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    p {
+        margin-bottom: 40px;
+        margin-top: 10px;
+        color: $light-grey;
+    }
+}

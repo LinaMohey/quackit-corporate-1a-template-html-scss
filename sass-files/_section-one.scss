@@ -1,0 +1,32 @@
+// Section one
+section.welcome-text {
+    background-color: yellowgreen;
+    color: greenyellow;
+    text-align: center;
+    padding: 30px;
+    padding-top: 78px;
+    h1 {
+        font-size: 4rem;
+        letter-spacing: 1.2;
+        margin: 10px;
+        font-weight: 300;
+    }
+    p {
+        font-size: 1.3rem;
+        padding: 10px;
+    }
+    a {
+        @include buttons;
+        display: inline-block;
+        margin: 5px;
+        font-size: 0.9rem;
+        letter-spacing: 0.3px;
+        font-weight: 400;
+        color: $primary-color;
+        z-index: 2;
+        background-color: $blue-color;
+        &:hover {
+            background-color: #215888;
+        }
+    }
+}
